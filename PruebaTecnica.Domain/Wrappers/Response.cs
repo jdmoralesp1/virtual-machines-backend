@@ -27,6 +27,6 @@ namespace PruebaTecnica.Domain.Wrappers
         public string? Message { get; private set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
-        public T Data { get; private set; } = default!;
+        public T Data { get; private set; } = default!; 
     }
 }
