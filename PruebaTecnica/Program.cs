@@ -116,6 +116,7 @@ app.UseAuthorization();
 app.UseCors("CorsPolicy");
 
 app.MapControllers();
+
 app.MapHub<VirtualMachineHub>("/virtualMachineHub");
 
 app.Run();

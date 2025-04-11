@@ -5,6 +5,7 @@ using PruebaTecnica.Application.Exceptions.Interfaces;
 using PruebaTecnica.Application.Interfaces;
 using PruebaTecnica.Domain.Interfaces;
 using PruebaTecnica.Domain.Models;
+using PruebaTecnica.Domain.Utils;
 using PruebaTecnica.Domain.Wrappers;
 using System;
 using System.Threading;
@@ -36,7 +37,7 @@ namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands.Handlers
                 Disc = request.Disc,
                 OperatingSystem = request.OperatingSystem,
                 IsActive = true,
-                CreatedAt = DateTime.Now,
+                CreatedAt = TimeUtil.ObtenerFechaYHoraZonaHorariaBogota(),
                 UserId = Guid.Parse(auditService.GetUserId()),
             });
 

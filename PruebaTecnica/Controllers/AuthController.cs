@@ -10,6 +10,7 @@ using System;
 using PruebaTecnica.Domain.Models;
 using System.Collections.Generic;
 using System.Linq;
+using PruebaTecnica.Domain.Utils;
 
 namespace PruebaTecnica.Controllers
 {
@@ -62,7 +63,7 @@ namespace PruebaTecnica.Controllers
                 issuer: configuration["Jwt:Issuer"],
                 audience: configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(double.Parse(configuration["Jwt:ExpireMinutes"])),
+                expires: TimeUtil.ObtenerFechaYHoraZonaHorariaBogota().AddMinutes(double.Parse(configuration["Jwt:ExpireMinutes"])),
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

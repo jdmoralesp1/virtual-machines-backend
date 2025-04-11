@@ -3,6 +3,7 @@ using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands;
 using PruebaTecnica.Application.Exceptions.Interfaces;
 using PruebaTecnica.Application.Interfaces;
 using PruebaTecnica.Domain.Interfaces;
+using PruebaTecnica.Domain.Utils;
 using PruebaTecnica.Domain.Wrappers;
 using System;
 using System.Threading;
@@ -30,7 +31,7 @@ namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands.Handlers
             var virtualMachine = await virtualMachineRepository.GetByIdAsync(request.VirtualMachineId);
 
             virtualMachine.IsActive = false;
-            virtualMachine.UpdatedAt = DateTime.Now;
+            virtualMachine.UpdatedAt = TimeUtil.ObtenerFechaYHoraZonaHorariaBogota();
             virtualMachine.UserModifierId = Guid.Parse(auditService.GetUserId());
 
             await virtualMachineRepository.SaveChangesAsync();
