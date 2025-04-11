@@ -7,7 +7,7 @@ namespace PruebaTecnica.Domain.Interfaces
         public Task<VirtualMachine?> GetByIdAsync(int id);
         public Task<VirtualMachine> Add(VirtualMachine virtualMachine);
         public Task<List<VirtualMachine>> GetAllAsync();
-        public VirtualMachine Update(VirtualMachine virtualMachine);
+        public Task<VirtualMachine> Update(VirtualMachine virtualMachine);
         public void Delete(VirtualMachine virtualMachine);
         public Task SaveChangesAsync();
 

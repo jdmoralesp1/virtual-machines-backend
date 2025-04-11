@@ -27,7 +27,7 @@ namespace PruebaTecnica.Data.Repository
         {
             context.VirtualMachines.Add(virtualMachine);
             await context.SaveChangesAsync();
-            await hubContext.Clients.All.SendAsync("ReceiveVirtualMachineUpdate", virtualMachine);
+            await hubContext.Clients.All.SendAsync("ReceiveVirtualMachineUpdate", new VirtualMachineHubModel(virtualMachine));
             return virtualMachine;
         }
 
@@ -39,9 +39,11 @@ namespace PruebaTecnica.Data.Repository
             return Task.FromResult(new List<VirtualMachine>());
         }
 
-        public VirtualMachine Update(VirtualMachine virtualMachine)
+        public async Task<VirtualMachine> Update(VirtualMachine virtualMachine)
         {
             context.VirtualMachines.Update(virtualMachine);
+            await context.SaveChangesAsync();
+            await hubContext.Clients.All.SendAsync("ReceiveVirtualMachineUpdate", new VirtualMachineHubModel(virtualMachine));
             return virtualMachine;
         }
 

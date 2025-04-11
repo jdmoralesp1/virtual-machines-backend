@@ -5,7 +5,7 @@ namespace PruebaTecnica.Application.Hubs
 {
     public class VirtualMachineHub : Hub
     {
-        public async Task SendVirtualMachineUpdate(VirtualMachine virtualMachine)
+        public async Task SendVirtualMachineUpdate(VirtualMachineHubModel virtualMachine)
         {
             await Clients.All.SendAsync("ReceiveVirtualMachineUpdate", virtualMachine);
         }

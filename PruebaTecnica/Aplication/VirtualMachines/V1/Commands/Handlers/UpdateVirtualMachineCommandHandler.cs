@@ -35,9 +35,7 @@ namespace PruebaTecnica.Aplication.VirtualMachines.V1.Commands.Handlers
             virtualMachine.UpdatedAt = DateTime.Now;
             virtualMachine.UserModifierId = Guid.Parse(auditService.GetUserId());
 
-            virtualMachineRepository.Update(virtualMachine);
-
-            await virtualMachineRepository.SaveChangesAsync();
+            await virtualMachineRepository.Update(virtualMachine);
 
             return new Response<string>(data: $"Se ha actualizado correctamente la maquina virtual con id {request.VirtualMachineId}");
         }

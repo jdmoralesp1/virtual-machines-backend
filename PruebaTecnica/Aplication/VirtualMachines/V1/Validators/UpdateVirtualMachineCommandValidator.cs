@@ -25,7 +25,7 @@ namespace PruebaTecnica.Aplication.VirtualMachines.V1.Validators
                 .GreaterThan(0).WithMessage("El campo Disc debe ser mayor que cero.");
 
             RuleFor(x => x.OperatingSystem)
-                .NotEmpty().NotNull().WithMessage("El campo OperatingSystem es obligatorio.")
+                .NotNull().WithMessage("El campo OperatingSystem es obligatorio.")
                 .IsInEnum().WithMessage("El campo OperatingSystem no es un valor válido.");
         }
     }
