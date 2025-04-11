@@ -63,7 +63,7 @@ namespace PruebaTecnica.Controllers
                 issuer: configuration["Jwt:Issuer"],
                 audience: configuration["Jwt:Audience"],
                 claims: claims,
-                expires: TimeUtil.ObtenerFechaYHoraZonaHorariaBogota().AddMinutes(double.Parse(configuration["Jwt:ExpireMinutes"])),
+                expires: DateTime.Now.AddMinutes(double.Parse(configuration["Jwt:ExpireMinutes"])),
                 signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
