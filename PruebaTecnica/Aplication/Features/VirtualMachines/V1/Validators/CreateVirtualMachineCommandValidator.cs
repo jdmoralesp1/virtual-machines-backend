@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
-using PruebaTecnica.Aplication.VirtualMachines.V1.Commands;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands;
 using PruebaTecnica.Application.Exceptions.Wrappers;
 using System;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.Validators
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Validators
 {
     public class CreateVirtualMachineCommandValidator : ValidationWrapper<CreateVirtualMachineCommand>
     {

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using PruebaTecnica.Aplication.VirtualMachines.V1;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1;
 using PruebaTecnica.Application.Exceptions;
 using PruebaTecnica.Application.Exceptions.Interfaces;
 using PruebaTecnica.Application.Hubs;

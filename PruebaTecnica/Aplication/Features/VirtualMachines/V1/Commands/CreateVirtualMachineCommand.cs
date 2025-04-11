@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using PruebaTecnica.Aplication.VirtualMachines.V1.DTOs;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.DTOs;
 using PruebaTecnica.Domain.Enums;
 using PruebaTecnica.Domain.Wrappers;
 using System;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.Commands
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands
 {
     public record struct CreateVirtualMachineCommand
     (

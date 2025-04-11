@@ -1,11 +1,11 @@
-﻿using PruebaTecnica.Aplication.VirtualMachines.V1.Commands;
+﻿using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands;
 using PruebaTecnica.Application.Exceptions.Interfaces;
 using PruebaTecnica.Domain.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.Validators
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Validators
 {
     public class UpdateVirtualMachinePersistenceValidator : ICustomValidator<UpdateVirtualMachineCommand>
     {

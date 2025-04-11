@@ -1,11 +1,11 @@
-﻿using PruebaTecnica.Aplication.VirtualMachines.V1.Queries;
+﻿using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Queries;
 using PruebaTecnica.Application.Exceptions.Interfaces;
 using PruebaTecnica.Domain.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.Validators
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Validators
 {
     public class GetAllVirtualMachinesPersistenceValidator : ICustomValidator<GetAllVirtualMachinesQuery>
     {
@@ -21,8 +21,8 @@ namespace PruebaTecnica.Aplication.VirtualMachines.V1.Validators
         {
             var virtualMachines = await virtualMachineRepository.GetAllAsync();
 
-            if(!virtualMachines.Any() || virtualMachines.TrueForAll(x => x.IsActive == false))
-                Failures = new List<KeyValuePair<string, string>>() { new ("VirtualMachines", "No hay maquinas virtuales registradas")};
+            if (!virtualMachines.Any() || virtualMachines.TrueForAll(x => x.IsActive == false))
+                Failures = new List<KeyValuePair<string, string>>() { new("VirtualMachines", "No hay maquinas virtuales registradas") };
 
             return !Failures.Any();
         }

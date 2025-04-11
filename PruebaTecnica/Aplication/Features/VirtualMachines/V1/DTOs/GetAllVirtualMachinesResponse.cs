@@ -1,7 +1,7 @@
 ﻿using PruebaTecnica.Domain.Enums;
 using System;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.DTOs
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.DTOs
 {
     public record struct GetAllVirtualMachinesResponse
     (
@@ -11,6 +11,6 @@ namespace PruebaTecnica.Aplication.VirtualMachines.V1.DTOs
         int Disc,
         string OperatingSystem,
         string CreatedAt,
-        string? UpdatedAt
+        string UpdatedAt
     );
 }

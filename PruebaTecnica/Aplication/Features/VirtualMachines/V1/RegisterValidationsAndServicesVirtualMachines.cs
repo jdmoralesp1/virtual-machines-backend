@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PruebaTecnica.Aplication.VirtualMachines.V1.Commands;
-using PruebaTecnica.Aplication.VirtualMachines.V1.Queries;
-using PruebaTecnica.Aplication.VirtualMachines.V1.Validators;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Queries;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Validators;
 using PruebaTecnica.Application.Exceptions.Interfaces;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1
 {
     public static class RegisterValidationsAndServicesVirtualMachines
     {

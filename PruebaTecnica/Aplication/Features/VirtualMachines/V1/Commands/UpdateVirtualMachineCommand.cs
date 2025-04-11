@@ -2,7 +2,7 @@
 using PruebaTecnica.Domain.Enums;
 using PruebaTecnica.Domain.Wrappers;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.Commands
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands
 {
     public record struct UpdateVirtualMachineCommand
     (

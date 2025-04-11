@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PruebaTecnica.Aplication.VirtualMachines.V1.Commands;
-using PruebaTecnica.Aplication.VirtualMachines.V1.Queries;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Queries;
 using System.Threading.Tasks;
 
 namespace PruebaTecnica.Controllers

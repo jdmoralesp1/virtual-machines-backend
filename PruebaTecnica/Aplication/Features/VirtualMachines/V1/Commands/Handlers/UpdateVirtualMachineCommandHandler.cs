@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands;
 using PruebaTecnica.Application.Exceptions.Interfaces;
 using PruebaTecnica.Application.Interfaces;
 using PruebaTecnica.Domain.Interfaces;
@@ -7,7 +8,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.Commands.Handlers
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Commands.Handlers
 {
     public class UpdateVirtualMachineCommandHandler : IRequestHandler<UpdateVirtualMachineCommand, Response<string>>
     {

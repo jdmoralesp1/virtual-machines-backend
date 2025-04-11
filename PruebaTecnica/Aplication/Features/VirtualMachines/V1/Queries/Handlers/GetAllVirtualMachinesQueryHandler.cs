@@ -1,5 +1,6 @@
 ﻿using MediatR;
-using PruebaTecnica.Aplication.VirtualMachines.V1.DTOs;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.DTOs;
+using PruebaTecnica.Aplication.Features.VirtualMachines.V1.Queries;
 using PruebaTecnica.Application.Exceptions.Interfaces;
 using PruebaTecnica.Domain.Enums;
 using PruebaTecnica.Domain.Interfaces;
@@ -10,7 +11,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PruebaTecnica.Aplication.VirtualMachines.V1.Queries.Handlers
+namespace PruebaTecnica.Aplication.Features.VirtualMachines.V1.Queries.Handlers
 {
     public class GetAllVirtualMachinesQueryHandler : IRequestHandler<GetAllVirtualMachinesQuery, Response<List<GetAllVirtualMachinesResponse>>>
     {
@@ -37,7 +38,7 @@ namespace PruebaTecnica.Aplication.VirtualMachines.V1.Queries.Handlers
                     Cores = x.Cores,
                     RAM = x.RAM,
                     Disc = x.Disc,
-                    OperatingSystem = ((OperatingSystems)x.OperatingSystem).ToString(),
+                    OperatingSystem = x.OperatingSystem.ToString(),
                     CreatedAt = TimeUtil.GetDateInFormatYYYYmmddHHmm(x.CreatedAt),
                     UpdatedAt = x.UpdatedAt is null ? null : TimeUtil.GetDateInFormatYYYYmmddHHmm(x.UpdatedAt.Value)
                 }).ToList()
