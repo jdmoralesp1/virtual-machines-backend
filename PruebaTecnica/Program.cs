@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using PruebaTecnica.Aplication.VirtualMachines.V1;
 using PruebaTecnica.Application.Exceptions;
 using PruebaTecnica.Application.Exceptions.Interfaces;
+using PruebaTecnica.Application.Hubs;
 using PruebaTecnica.Application.Interfaces;
 using PruebaTecnica.Application.Services;
 using PruebaTecnica.Data.Context;
@@ -77,11 +78,15 @@ builder.Services.AddValidationsAndServicesVirtualMachine();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin()
+    options.AddPolicy("CorsPolicy", builder => builder
+        .WithOrigins("http://localhost:4200", "https://another-example.com")
         .AllowAnyMethod()
         .AllowAnyHeader()
+        .AllowCredentials()
         );
 });
+
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -111,5 +116,6 @@ app.UseAuthorization();
 app.UseCors("CorsPolicy");
 
 app.MapControllers();
+app.MapHub<VirtualMachineHub>("/virtualMachineHub");
 
 app.Run();

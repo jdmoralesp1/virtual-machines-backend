@@ -22,3 +22,15 @@ D:\Pruebas-Tecnicas\IFX\Backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecn
 D:\Pruebas-Tecnicas\IFX\Backend\PruebaTecnica.Domain\obj\Debug\net6.0\refint\PruebaTecnica.Domain.dll
 D:\Pruebas-Tecnicas\IFX\Backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.pdb
 D:\Pruebas-Tecnicas\IFX\Backend\PruebaTecnica.Domain\obj\Debug\net6.0\ref\PruebaTecnica.Domain.dll
+D:\virtual-machines-backend\PruebaTecnica.Domain\bin\Debug\net6.0\PruebaTecnica.Domain.deps.json
+D:\virtual-machines-backend\PruebaTecnica.Domain\bin\Debug\net6.0\PruebaTecnica.Domain.dll
+D:\virtual-machines-backend\PruebaTecnica.Domain\bin\Debug\net6.0\PruebaTecnica.Domain.pdb
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.AssemblyInfoInputs.cache
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.AssemblyInfo.cs
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.csproj.CoreCompileInputs.cache
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.sourcelink.json
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.dll
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\refint\PruebaTecnica.Domain.dll
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\PruebaTecnica.Domain.pdb
+D:\virtual-machines-backend\PruebaTecnica.Domain\obj\Debug\net6.0\ref\PruebaTecnica.Domain.dll

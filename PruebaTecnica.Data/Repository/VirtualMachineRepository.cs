@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
+using PruebaTecnica.Application.Hubs;
 using PruebaTecnica.Data.Context;
 using PruebaTecnica.Domain.Interfaces;
 using PruebaTecnica.Domain.Models;
@@ -8,10 +10,12 @@ namespace PruebaTecnica.Data.Repository
     public class VirtualMachineRepository : IVirtualMachineRepository
     {
         private readonly PruebaTecnicaContext context;
+        private readonly IHubContext<VirtualMachineHub> hubContext;
 
-        public VirtualMachineRepository(PruebaTecnicaContext context)
+        public VirtualMachineRepository(PruebaTecnicaContext context, IHubContext<VirtualMachineHub> hubContext)
         {
             this.context = context;
+            this.hubContext = hubContext;
         }
 
         public async Task<VirtualMachine?> GetByIdAsync(int id)
@@ -19,9 +23,11 @@ namespace PruebaTecnica.Data.Repository
             return await context.VirtualMachines.FirstOrDefaultAsync(x => x.Id == id && x.IsActive == true);
         }
 
-        public VirtualMachine Add(VirtualMachine virtualMachine)
+        public async Task<VirtualMachine> Add(VirtualMachine virtualMachine)
         {
             context.VirtualMachines.Add(virtualMachine);
+            await context.SaveChangesAsync();
+            await hubContext.Clients.All.SendAsync("ReceiveVirtualMachineUpdate", virtualMachine);
             return virtualMachine;
         }
 

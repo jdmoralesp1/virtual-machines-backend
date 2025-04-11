@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj",
+      "projectUniqueName": "D:\\virtual-machines-backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj",
       "projectName": "PruebaTecnica.Domain",
-      "projectPath": "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj",
+      "projectPath": "D:\\virtual-machines-backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj",
       "packagesPath": "C:\\Users\\jdmor\\.nuget\\packages\\",
-      "outputPath": "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Domain\\obj\\",
+      "outputPath": "D:\\virtual-machines-backend\\PruebaTecnica.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

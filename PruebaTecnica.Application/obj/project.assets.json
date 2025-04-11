@@ -542,11 +542,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Application\\PruebaTecnica.Application.csproj",
+      "projectUniqueName": "D:\\virtual-machines-backend\\PruebaTecnica.Application\\PruebaTecnica.Application.csproj",
       "projectName": "PruebaTecnica.Application",
-      "projectPath": "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Application\\PruebaTecnica.Application.csproj",
+      "projectPath": "D:\\virtual-machines-backend\\PruebaTecnica.Application\\PruebaTecnica.Application.csproj",
       "packagesPath": "C:\\Users\\jdmor\\.nuget\\packages\\",
-      "outputPath": "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Application\\obj\\",
+      "outputPath": "D:\\virtual-machines-backend\\PruebaTecnica.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -568,8 +568,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj": {
-              "projectPath": "D:\\Pruebas-Tecnicas\\IFX\\Backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj"
+            "D:\\virtual-machines-backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj": {
+              "projectPath": "D:\\virtual-machines-backend\\PruebaTecnica.Domain\\PruebaTecnica.Domain.csproj"
             }
           }
         }

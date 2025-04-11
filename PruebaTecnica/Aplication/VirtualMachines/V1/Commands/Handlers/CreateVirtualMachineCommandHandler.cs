@@ -28,7 +28,7 @@ namespace PruebaTecnica.Aplication.VirtualMachines.V1.Commands.Handlers
         {
             await validationService.ExecuteValidationGuard(request);
 
-            var virtualMachine = virtualMachineRepository.Add(new VirtualMachine
+            var virtualMachine = await virtualMachineRepository.Add(new VirtualMachine
             {
                 Cores = request.Cores,
                 RAM = request.RAM,
@@ -38,8 +38,6 @@ namespace PruebaTecnica.Aplication.VirtualMachines.V1.Commands.Handlers
                 CreatedAt = DateTime.Now,
                 UserId = Guid.Parse(auditService.GetUserId()),
             });
-
-            await virtualMachineRepository.SaveChangesAsync();
 
             return new Response<CreateVirtualMachineResponse>(new CreateVirtualMachineResponse(virtualMachine.Id, virtualMachine.CreatedAt, virtualMachine.UpdatedAt));
         }
